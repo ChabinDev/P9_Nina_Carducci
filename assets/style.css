@@ -12,7 +12,7 @@ body {
 	position: sticky;
 	top:0;
 	z-index: 1000;
-	width: 1875px;
+	max-width: 1875px;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
@@ -260,15 +260,31 @@ footer {
 	}
 	#about-me .about-me__introduction,
 	#about-me .about-me__content {
+		display: flex;
+		padding: 0 20px 0 20px;
 		width: 100%;
+		font-size: 18px;
+	}
+	#about-me p {
+		display: flex;
+		font-size: 14px;
+		padding: 0 20px 0 20px;
 	}
 }
 @media all and (max-width: 1000px) {
 	#about{
+		display: flex;
 		flex-direction: column;
 	}
+	#about-me {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.picture {
-		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.picture.left::before {
 		width: 100%;
@@ -321,22 +337,28 @@ footer {
 		width: 366px;
 	}
 	.picture.left img {
-		height: 768px;
+		height: 370px;
 	}
 	.picture.right img {
 		width: 366px;
 	}
 	.quote__text {
 		font-size: 1.5rem;
+	}
+	#gallery {
+		display: flex;
+	}
 }
 @media all and (max-width: 650px) {
 	.top-header {
+		display: flex;
 		flex-direction: column;
 		padding-inline: 0;
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
+		font-size: 13px;
 	}
 	.top-header .nav li {
 		flex: 1;
@@ -353,6 +375,7 @@ footer {
 		max-width: 90%;
 	}
 	#about, #contact {
+		display: flex;
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
@@ -360,12 +383,19 @@ footer {
 		width: 100%;
 	}
 	.picture {
-		width: 80%;
 		object-fit: cover;
 	}
 	footer {
 		p {
 			font-size: 0.8rem;
 		}
+	}
+	#about {
+		display: flex;
+		width: 100%;
+	}
+	#about-me {
+		display: flex;
+		flex-direction: column;
 	}
 }
