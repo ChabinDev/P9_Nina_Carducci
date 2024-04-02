@@ -320,6 +320,9 @@ footer {
 	.gallery-item {
 		width: 366px;
 	}
+	.picture.left img {
+		height: 768px;
+	}
 }
 @media all and (max-width: 650px) {
 	.top-header {
