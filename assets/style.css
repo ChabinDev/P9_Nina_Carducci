@@ -323,6 +323,9 @@ footer {
 	.picture.left img {
 		height: 768px;
 	}
+	.picture.right img {
+		width: 366px;
+	}
 }
 @media all and (max-width: 650px) {
 	.top-header {
