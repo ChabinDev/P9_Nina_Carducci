@@ -326,6 +326,8 @@ footer {
 	.picture.right img {
 		width: 366px;
 	}
+	.quote__text {
+		font-size: 1.5rem;
 }
 @media all and (max-width: 650px) {
 	.top-header {
