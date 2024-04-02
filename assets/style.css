@@ -6,17 +6,13 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-#header {
-	display: flex;
-	justify-content: center;
-	width: 1670px;
-	height: 888px;
-}
+
 .top-header {
 	background-color: white;
 	position: sticky;
 	top:0;
 	z-index: 1000;
+	width: 1875px;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
@@ -66,14 +62,13 @@ body {
 	left: 0;
 	z-index: -1;
 }
+
 .picture {
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
 }
-.picture img {
-	width: 100%;
-}
+
 #about-me {
 	flex: 2
 }
@@ -88,12 +83,12 @@ body {
 	font-style: italic;
 	width: 60%;
 }
-#about-me p {
+.about-me__content {
 	width: 80%;
 	font-size: 14px;
 }
 #gallery {
-	/* min-height: 100vh; */
+	min-height: 100vh;
 }
 .title{
 	text-align: center;
@@ -102,13 +97,16 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #171717;
-	background-color: #BEB45A;
+	color: #FFF;
+	background-color: #1C6474;
 	border-radius:0 ;
 }
+
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	cursor: pointer;
 }
 .item-column {
 	position: relative;
@@ -147,6 +145,7 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
+	font-size: 2.5rem;
 
 }
 .quote__author {
@@ -236,6 +235,18 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+footer {
+	background-color: #1C6474;
+	padding-block: 2em;
+	color: white;
+	text-align: center;
+	p {
+		a {
+			color: white;
+		}
+	}
+}
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -247,7 +258,8 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me .about-me__introduction,
+	#about-me .about-me__content {
 		width: 100%;
 	}
 }
@@ -305,6 +317,10 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+	.gallery-item {
+		height: 768px;
+		width: 366px;
+	}
 }
 @media all and (max-width: 650px) {
 	.top-header {
@@ -338,5 +354,11 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+		object-fit: cover;
+	}
+	footer {
+		p {
+			font-size: 0.8rem;
+		}
 	}
 }
