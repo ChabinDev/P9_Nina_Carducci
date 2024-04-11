@@ -1,18 +1,16 @@
 body {
-	//max-width: 1920px;
+	max-width: 1920px;
 	margin: auto;
 }
 * {
 	font-family: 'Inter';
 	font-style: normal;
 }
-
 .top-header {
 	background-color: white;
 	position: sticky;
 	top:0;
 	z-index: 1000;
-	max-width: 1875px;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
@@ -67,8 +65,13 @@ body {
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
+	width: 80%;
 }
 
+.picture img {
+	width: 80%;
+
+}
 #about-me {
 	flex: 2
 }
@@ -83,12 +86,13 @@ body {
 	font-style: italic;
 	width: 60%;
 }
-.about-me__content {
+#about-me p {
 	width: 80%;
 	font-size: 14px;
 }
+
 #gallery {
-	min-height: 100vh;
+	/*	min-height: 100vh; */
 }
 .title{
 	text-align: center;
@@ -97,16 +101,13 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #FFF;
-	background-color: #1C6474;
+	color: #fff;
+	background-color: #BEB45A;
 	border-radius:0 ;
 }
-
 .nav-pills .nav-link {
-	color: #000;
-	cursor: pointer;
+	color: #000
 }
 .item-column {
 	position: relative;
@@ -117,6 +118,7 @@ body {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
+
 }
 .gallery-item {
 	position: absolute;
@@ -124,6 +126,9 @@ body {
 	height: 100%;
 	object-fit: cover;
 	padding: .5em;
+}
+.img-fluid {
+	height: 100% !important;
 }
 .mg-prev, .mg-next {
 	width: 30px;
@@ -134,6 +139,7 @@ body {
 	display: flex;
 	font-size: 24px;
 }
+
 .quote {
 	font-family: 'Spectral';
 	font-style: italic;
@@ -145,7 +151,6 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 2.5rem;
 
 }
 .quote__author {
@@ -153,6 +158,7 @@ body {
 	font-weight: 800;
 	font-size: 22px;
 }
+
 #services {
 	margin: auto;
 	background-color: #A8D5D8 ;
@@ -168,12 +174,14 @@ body {
 	left: 0;
 	z-index: 0;
 }
+
 #services .container {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
 
 }
+
 .service {
 	background-color: white;
 	max-width: 390px;
@@ -185,6 +193,7 @@ body {
 	justify-content: space-between;
 	z-index: 1;
 }
+
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -192,6 +201,7 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 }
+
 #contact .container {
 	display: flex;
 }
@@ -215,6 +225,7 @@ form {
 	width: 70%;
 	align-items: flex-start;
 }
+
 form input {
 	width: 100%;
 	background-color: transparent;
@@ -222,6 +233,7 @@ form input {
 	height: 2.5em;
 	margin-bottom: 20px;
 }
+
 form textarea {
 	width: 100%;
 	background-color: transparent;
@@ -247,6 +259,7 @@ footer {
 		}
 	}
 }
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -258,33 +271,18 @@ footer {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me .about-me__introduction,
-	#about-me .about-me__content {
-		display: flex;
-		padding: 0 20px 0 20px;
+	#about-me h6, #about-me p {
 		width: 100%;
-		font-size: 18px;
-	}
-	#about-me p {
-		display: flex;
-		font-size: 14px;
-		padding: 0 20px 0 20px;
 	}
 }
+
 @media all and (max-width: 1000px) {
 	#about{
-		display: flex;
 		flex-direction: column;
-	}
-	#about-me {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+
 	}
 	.picture {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		width: 50%;
 	}
 	.picture.left::before {
 		width: 100%;
@@ -311,6 +309,7 @@ footer {
 	.service__description{
 		margin-bottom: 1em;
 	}
+
 	#services .container::before{
 		width: 30%;
 		height: 100%;
@@ -319,6 +318,7 @@ footer {
 		left: auto;
 		z-index: 0;
 	}
+
 	#contact .container {
 		flex-direction: column;
 	}
@@ -333,32 +333,16 @@ footer {
 		right: 0;
 		z-index: -1;
 	}
-	.gallery-item {
-		width: 366px;
-	}
-	.picture.left img {
-		height: 370px;
-	}
-	.picture.right img {
-		width: 366px;
-	}
-	.quote__text {
-		font-size: 1.5rem;
-	}
-	#gallery {
-		display: flex;
-	}
 }
+
 @media all and (max-width: 650px) {
 	.top-header {
-		display: flex;
 		flex-direction: column;
 		padding-inline: 0;
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
-		font-size: 13px;
 	}
 	.top-header .nav li {
 		flex: 1;
@@ -375,7 +359,6 @@ footer {
 		max-width: 90%;
 	}
 	#about, #contact {
-		display: flex;
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
@@ -383,19 +366,6 @@ footer {
 		width: 100%;
 	}
 	.picture {
-		object-fit: cover;
-	}
-	footer {
-		p {
-			font-size: 0.8rem;
-		}
-	}
-	#about {
-		display: flex;
-		width: 100%;
-	}
-	#about-me {
-		display: flex;
-		flex-direction: column;
+		width: 80%;
 	}
 }
